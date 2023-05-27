@@ -1,0 +1,35 @@
+name: Generate Snake Game
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  generate:
+    name: Generate Snake GIF
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: behnum
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Push
+        id: push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
+          git add dist
+          git commit -m "Update Snake GIF"
+          git push
