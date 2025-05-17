@@ -1,11 +1,5 @@
 ### Behnam Baharmand
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github-snake" src="dist/github-snake.svg" />
-</picture>
-
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-baharmand-blue)](https://www.linkedin.com/in/baharmand)
 [![Gmail Badge](https://img.shields.io/badge/gmail-bbaharmand%40gmail.com-red)](mailto:bbaharmand@gmail.com)
 
